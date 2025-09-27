@@ -1,0 +1,52 @@
+# Test dependencies for movie generation platform
+
+# Core testing framework
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-mock==3.12.0
+pytest-timeout==2.2.0
+pytest-xdist==3.5.0
+
+# HTTP client for API testing
+httpx==0.25.2
+
+# WebSocket client for MCP testing
+websockets==12.0
+
+# Docker for container testing (optional)
+docker==6.1.3
+
+# Performance testing
+aiofiles==23.2.1
+
+# Data analysis for test results
+numpy==1.24.3
+
+# JSON handling
+orjson==3.9.10
+
+# Logging and structured output
+structlog==23.2.0
+
+# Test reporting
+pytest-html==4.1.1
+pytest-json-report==1.5.0
+
+# Code coverage (optional)
+pytest-cov==4.1.0
+
+# Debugging support
+pytest-pdb==0.2.0
+
+# Parallel test execution
+pytest-parallel==0.1.1
+
+# Mocking and fixtures
+factory-boy==3.3.0
+faker==20.1.0
+
+# Time manipulation for tests
+freezegun==1.2.2
+
+# Environment configuration
+python-dotenv==1.0.0
