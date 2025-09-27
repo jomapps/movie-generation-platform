@@ -1,0 +1,42 @@
+{
+  "repositories": [
+    {
+      "name": "mcp-story-service",
+      "path": "services/mcp-story-service",
+      "branch": "master",
+      "url": "https://github.com/jomapps/mcp-story-service.git"
+    },
+    {
+      "name": "mcp-character-service",
+      "path": "services/mcp-character-service",
+      "branch": "master",
+      "url": "https://github.com/jomapps/mcp-character-service.git"
+    },
+    {
+      "name": "mcp-brain-service",
+      "path": "services/mcp-brain-service",
+      "branch": "master",
+      "url": "https://github.com/jomapps/mcp-brain-service.git"
+    },
+    {
+      "name": "langgraph-orchestrator",
+      "path": "services/langgraph-orchestrator",
+      "branch": "master",
+      "url": "https://github.com/jomapps/langgraph-orchestrator.git"
+    },
+    {
+      "name": "celery-redis",
+      "path": "services/celery-redis",
+      "branch": "master",
+      "url": "https://github.com/jomapps/celery-redis.git"
+    },
+    {
+      "name": "auto-movie",
+      "path": "apps/auto-movie",
+      "branch": "master",
+      "url": "https://github.com/jomapps/auto-movie.git"
+    }
+  ]
+}
+
+

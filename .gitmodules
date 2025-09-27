@@ -1,0 +1,24 @@
+[submodule "services/mcp-story-service"]
+	path = services/mcp-story-service
+	url = https://github.com/jomapps/mcp-story-service.git
+	branch = master
+[submodule "services/mcp-character-service"]
+	path = services/mcp-character-service
+	url = https://github.com/jomapps/mcp-character-service.git
+	branch = master
+[submodule "services/mcp-brain-service"]
+	path = services/mcp-brain-service
+	url = https://github.com/jomapps/mcp-brain-service.git
+	branch = master
+[submodule "services/langgraph-orchestrator"]
+	path = services/langgraph-orchestrator
+	url = https://github.com/jomapps/langgraph-orchestrator.git
+	branch = master
+[submodule "services/celery-redis"]
+	path = services/celery-redis
+	url = https://github.com/jomapps/celery-redis.git
+	branch = master
+[submodule "apps/auto-movie"]
+	path = apps/auto-movie
+	url = https://github.com/jomapps/auto-movie.git
+	branch = master
