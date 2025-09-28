@@ -54,3 +54,6 @@
 	path = services/webhook-dispatcher-service
 	url = https://github.com/jomapps/webhook-dispatcher-service.git
 	branch = master
+[submodule "services/mcp-story-bible-service"]
+	path = services/mcp-story-bible-service
+	url = https://github.com/jomapps/mcp-story-bible-service.git

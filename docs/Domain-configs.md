@@ -50,6 +50,12 @@
 
 ### 8. **Domain-Specific MCP Servers** (Future Phases)
 
+#### MCP Story Bible Service
+- **Local**: `localhost:8015`
+- **Dev**: `story-bible.ngrok.pro`
+- **Prod**: `story-bible.ft.tc`
+- **Purpose**: Story bible creation, narrative structure, character arcs, scene management
+
 #### Story MCP Server
 - **Local**: `localhost:8010`
 - **Dev**: `story.ngrok.pro`
@@ -138,7 +144,8 @@
 ### **Extended Services (Phase 4+)**
 ```bash
 8003 - LangGraph Orchestrator
-8010-8014 - Domain MCP Servers
+8010-8015 - Domain MCP Servers
+8015 - MCP Story Bible Service
 9090 - Prometheus Metrics
 3001 - Grafana Dashboard
 8100 - Health Check API
@@ -176,6 +183,7 @@ ngrok http 7474 --domain=neo4j.ngrok.pro
 ngrok http 8003 --domain=agents.ngrok.pro
 
 # Domain MCP Servers
+ngrok http 8015 --domain=story-bible.ngrok.pro
 ngrok http 8010 --domain=story.ngrok.pro
 ngrok http 8011 --domain=characters.ngrok.pro
 ngrok http 8012 --domain=visuals.ngrok.pro

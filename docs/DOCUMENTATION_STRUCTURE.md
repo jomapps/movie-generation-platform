@@ -26,6 +26,8 @@ docs/
 ├── TROUBLESHOOTING.md          ← Common problems and solutions
 ├── DEVELOPMENT_WORKFLOW.md     ← Development processes and standards
 ├── CLARIFICATIONS.md           ← Items needing clarification
+├── services/                   ← **NEW** Service-specific technical specifications
+│   └── MCP_STORY_BIBLE_SERVICE.md ← Story bible service technical spec
 ├── thoughts/                   ← Design specifications and planning
 │   ├── movie-platform-idea.md ← Complete 50+ agent system specification
 │   ├── prompt-management.md   ← AI prompt system implementation spec
@@ -67,6 +69,12 @@ docs/
 | File | Audience | Purpose | Contents |
 |------|----------|---------|-----------|
 | `CLARIFICATIONS.md` | Project team | Gap identification | Missing/unclear information that needs resolution |
+
+### Service Documentation (Technical Specifications)
+
+| File | Audience | Purpose | Contents |
+|------|----------|---------|----------|
+| `services/MCP_STORY_BIBLE_SERVICE.md` | Developers | Service specification | Technical spec, MCP tools, integration patterns |
 
 ## 🎯 Information Flow
 
