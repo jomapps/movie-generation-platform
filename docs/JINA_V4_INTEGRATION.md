@@ -1,7 +1,7 @@
 # Movie Generation Platform - Jina v4 Integration
 
-**Last Verified**: January 28, 2025  
-**Status**: **IMPLEMENTATION COMPLETE** ✅  
+**Last Verified**: January 28, 2025
+**Status**: **IMPLEMENTATION COMPLETE** ✅
 **Architecture Fix**: **100% Complete** (All Phases Finished)
 
 ## 🎯 **JINA ARCHITECTURE TRANSFORMATION COMPLETE**
@@ -18,6 +18,14 @@ The platform has successfully completed a comprehensive architecture transformat
 
 #### **Production-Ready Jina v4 Integration**
 - **✅ Real Jina v4 API** integration with proper authentication and error handling
+
+> Payload format note (v4): When calling Jina v4 embeddings, do not send `encoding_format`. Wrap each item as an object. Example minimal body for text batch:
+>
+> ```json
+> {"model":"jina-embeddings-v4","input":[{"text":"hello"},{"text":"world"}]}
+> ```
+> This is implemented in `services/mcp-brain-service/src/lib/embeddings.py` and controlled via `JINA_MODEL` in `.env.local`.
+
 - **✅ Batch processing capabilities** with 80% API call reduction
 - **✅ Fallback to mock** for development environments
 - **✅ Retry logic** and comprehensive error handling
@@ -37,7 +45,7 @@ The platform has successfully completed a comprehensive architecture transformat
 - embed_text(text: str, project_id: str) -> EmbeddingResult
 - batch_embed_texts(texts: List[str], project_id: str) -> List[EmbeddingResult]
 
-# Semantic Search Tools  
+# Semantic Search Tools
 - search_by_embedding(embedding: List[float], project_id: str, limit: int) -> SearchResults
 - batch_similarity_search(queries: List[str], project_id: str) -> List[SearchResults]
 
@@ -90,7 +98,7 @@ class GraphNode(BaseModel):
     id: str
     labels: List[str]
     properties: Dict[str, Any]
-    
+
 class GraphRelationship(BaseModel):
     from_node: str
     to_node: str
@@ -119,7 +127,7 @@ class AgentMemory(BaseModel):
 ```python
 class KnowledgeService:
     """Centralized knowledge management with Jina v4 and Neo4j integration"""
-    
+
     async def store_workflow_data(self, workflow_data: dict, project_id: str)
     async def search_similar_workflows(self, query: str, project_id: str)
     async def store_agent_memory(self, agent_id: str, memory_data: dict, project_id: str)
@@ -135,16 +143,16 @@ class KnowledgeService:
 ```python
 class JinaEmbeddingService:
     """Production Jina v4 API integration with comprehensive error handling"""
-    
+
     async def embed_text(self, text: str) -> List[float]:
         """Single text embedding with retry logic"""
-        
+
     async def embed_batch(self, texts: List[str]) -> List[List[float]]:
         """Batch embedding with optimal API usage"""
-        
+
     async def embed_image(self, image_data: bytes) -> List[float]:
         """Multimodal image embedding support"""
-        
+
     # Features:
     - Real Jina v4 API calls with authentication
     - Fallback to mock for development environments
@@ -161,14 +169,14 @@ class JinaEmbeddingService:
 ```python
 class BatchService:
     """Efficient batch processing with concurrent execution"""
-    
+
     # Features:
     - Concurrent processing with semaphore control
     - Configurable batch sizes and concurrency limits
     - Performance monitoring and metrics collection
     - Error handling and recovery mechanisms
     - Progress tracking and status reporting
-    
+
     # Performance Results:
     - 80% reduction in API calls vs individual requests
     - Concurrent processing of multiple batches
@@ -185,12 +193,12 @@ class BatchService:
 ```python
 class BrainServiceClient:
     """Full MCP WebSocket client for orchestrator integration"""
-    
+
     async def store_workflow_execution(self, workflow_data: dict, project_id: str)
     async def search_similar_patterns(self, query: str, project_id: str)
     async def store_agent_decision(self, agent_id: str, decision_data: dict, project_id: str)
     async def get_workflow_context(self, workflow_id: str, project_id: str)
-    
+
     # Features:
     - WebSocket connection management with reconnection logic
     - Complete MCP protocol implementation
@@ -215,11 +223,11 @@ class BrainServiceClient:
 class BaseWorkflow:
     def __init__(self):
         self.brain_client = BrainServiceClient(settings.BRAIN_SERVICE_BASE_URL)
-    
+
     async def log_execution_step(self, step_data: dict):
         """All workflow steps logged to centralized knowledge graph"""
         await self.brain_client.store_workflow_execution(step_data, self.project_id)
-    
+
     async def get_similar_workflows(self, context: str):
         """Leverage historical workflow patterns for optimization"""
         return await self.brain_client.search_similar_patterns(context, self.project_id)
@@ -236,11 +244,11 @@ class BaseWorkflow:
 export class BrainServiceClient {
   private wsUrl: string;
   private connection: WebSocket | null = null;
-  
+
   constructor(baseUrl: string) {
     this.wsUrl = baseUrl.replace('https://', 'wss://').replace('http://', 'ws://');
   }
-  
+
   // Complete MCP tool integration
   async embedText(text: string, projectId: string): Promise<EmbeddingResult>
   async searchByEmbedding(embedding: number[], projectId: string): Promise<SearchResults>
@@ -248,10 +256,10 @@ export class BrainServiceClient {
   async createCharacter(character: CharacterData, projectId: string): Promise<string>
   async findSimilarCharacters(query: string, projectId: string): Promise<Character[]>
   async queryGraph(cypherQuery: string, projectId: string): Promise<any>
-  
+
   // Features:
   - WebSocket connection management
-  - Automatic reconnection with exponential backoff  
+  - Automatic reconnection with exponential backoff
   - Request/response correlation
   - Error handling and timeout management
   - Connection pooling and optimization
@@ -276,12 +284,12 @@ export class BrainServiceClient {
 ```python
 class TaskBrainClient:
     """Brain service integration for background task processing"""
-    
+
     async def store_task_execution(self, task_data: dict, project_id: str)
     async def find_similar_tasks(self, task_description: str, project_id: str)
     async def store_task_results(self, results: dict, project_id: str)
     async def get_task_context(self, task_id: str, project_id: str)
-    
+
     # Features:
     - Task execution pattern storage
     - Historical task optimization
@@ -297,7 +305,7 @@ class TaskBrainClient:
 
 **Integration Tests** (`tests/integration/`):
 - **✅ MCP WebSocket communication tests**
-- **✅ Jina v4 API integration tests** 
+- **✅ Jina v4 API integration tests**
 - **✅ Neo4j knowledge graph tests**
 - **✅ Cross-service communication tests**
 - **✅ End-to-end workflow tests**
@@ -424,6 +432,6 @@ class TaskBrainClient:
 
 **Related Documentation**:
 - `docs/fixing-docs/jina-fix-implementation-plan.md` - Complete implementation tracking
-- `docs/architecture/brain-service.md` - Technical architecture documentation  
+- `docs/architecture/brain-service.md` - Technical architecture documentation
 - `docs/api/brain-service-api.md` - Comprehensive MCP tools API reference
 - `docs/troubleshooting/integration-issues.md` - Integration troubleshooting guide

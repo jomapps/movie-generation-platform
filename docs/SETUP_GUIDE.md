@@ -60,12 +60,12 @@ git submodule status
 ```bash
 cd services/mcp-brain-service
 
-# Copy environment template and configure
-cp .env.example .env
-# Edit .env file with your API keys (see Environment Configuration below)
+# Create local env file and configure (Docker Compose reads .env.local)
+cp .env .env.local  # or create .env.local from scratch
+# Edit .env.local with your API keys (see Environment Configuration below)
 
 # Start with Docker
-docker-compose up -d
+docker compose up -d
 
 # Verify it's running
 curl http://localhost:8002/health
@@ -119,21 +119,22 @@ docker ps
 
 ### Environment Configuration
 
-#### Brain Service (.env)
+#### Brain Service (.env.local)
 ```bash
-# services/mcp-brain-service/.env
+# services/mcp-brain-service/.env.local
 
 # CRITICAL - Required for brain service to function
 JINA_API_KEY=your_jina_api_key_here
 JINA_API_URL=https://api.jina.ai/v1/embeddings
+JINA_MODEL=jina-embeddings-v4
 
-# Database configuration  
-NEO4J_URI=bolt://localhost:7687
+# Database configuration
+NEO4J_URI=neo4j://localhost:7687
 NEO4J_USER=neo4j
 NEO4J_PASSWORD=your_secure_password
 
 # Service configuration
-MCP_SERVER_PORT=8002
+PORT=8002
 ENVIRONMENT=development
 
 # CORS configuration for frontend
@@ -216,12 +217,11 @@ npm run dev
 curl http://localhost:8002/health
 
 # Test MCP WebSocket connection (requires wscat: npm install -g wscat)
-wscat -c ws://localhost:8002/mcp
+wscat -c ws://localhost:8002/
+# Then send a JSON message like:
+# {"tool":"create_character","project_id":"smoke-test","name":"Alice","personality_description":"Curious and adventurous","appearance_description":"Short blonde hair"}
 
-# Test embedding functionality (if configured correctly)
-curl -X POST http://localhost:8002/api/v1/embed \
-  -H "Content-Type: application/json" \
-  -d '{"text": "test embedding", "project_id": "test-project"}'
+# You should receive a success response with a character_id
 ```
 
 ### 2. Frontend Integration Test
@@ -266,10 +266,10 @@ docker logs langgraph-orchestrator
 git submodule update --recursive --remote
 
 # Restart all Docker services
-docker-compose down && docker-compose up -d
+docker compose down && docker compose up -d
 
 # View all service logs
-docker-compose logs -f
+docker compose logs -f
 
 # Clean up Docker resources
 docker system prune
