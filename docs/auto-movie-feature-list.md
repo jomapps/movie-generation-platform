@@ -1,6 +1,6 @@
 # Auto-Movie Platform - Complete Feature Implementation Status
 
-**Last Updated**: January 27, 2025  
+**Last Updated**: September 28, 2025
 **Status**: Phase 1 Foundation Complete ✅ | Phase 2 Enhancement In Progress 🔄
 
 ## 🏗️ Architecture Overview
@@ -30,6 +30,8 @@ The auto-movie platform is an AI-powered movie production platform built with:
 - [x] **Projects Collection** - Movie projects with metadata, status tracking, progress
 - [x] **Sessions Collection** - Chat sessions with conversation history and workflow state
 - [x] **Media Collection** - File uploads with AI analysis and embeddings support
+
+- [x] **Prompt Collections** - promptTemplates (versioned) and promptsExecuted (not versioned)
 
 ### 🌐 API Infrastructure
 - [x] **Chat API Endpoints** (`/api/v1/chat/*`)
@@ -75,6 +77,8 @@ The auto-movie platform is an AI-powered movie production platform built with:
 - [x] **AI Error Handling** - Fallback mechanisms and circuit breakers
 - [x] **Task Service Client** - Connection to Celery GPU processing service
 - [x] **Prompt Templates** - Structured LLM prompts for movie production
+  - Note: Maps to PayloadCMS collections promptTemplates (versioned) and promptsExecuted (not versioned), and is executed via the Prompt Management & Testing System (see Phase 2 > Prompt Management & Testing System).
+
 
 ### 🔐 Security & Middleware
 - [x] **Authentication Middleware** - JWT-based auth for API routes
@@ -94,7 +98,31 @@ The auto-movie platform is an AI-powered movie production platform built with:
 - [ ] **Manual Error Retry** - Network failure handling (90% complete)
 - [ ] **Enhanced Project Editing** - Advanced form features (80% complete)
 
+### 🧠 Prompt Management & Testing System (Spec: thoughts/prompt-management)
+- [x] Collections enabled in PayloadCMS (promptTemplates, promptsExecuted)
+- [ ] REST API endpoints: /api/prompt-templates, /api/prompt-templates/:id, /api/tags/:group/templates, /api/prompts/execute, /api/prompts, /api/prompts/:id
+- [ ] UI Screens: Templates List, Template Detail (Details | Test | Versions), Executions List, Execution Detail
+- [ ] Execution Engine: variable interpolation, validation, provider routing (OpenRouter/FAL), persistence
+- [ ] Seeded model options: OPENROUTER_DEFAULT_MODEL, OPENROUTER_BACKUP_MODEL, FAL_TEXT_TO_IMAGE_MODEL, FAL_IMAGE_TO_IMAGE_MODEL
+- [ ] Run Tag Group utility
+
 ---
+## 🧱 Service Scaffolds Created (as of September 28, 2025)
+
+The following standalone services have been scaffolded (folder + docs/implementation.md) to support planned features. These remain listed as planned until endpoints/workers are implemented.
+
+- Visual Design Pipeline → services/mcp-visual-design-service/docs/implementation.md
+- Script Generation → services/mcp-script-service/docs/implementation.md
+- Video Processing Pipeline → services/mcp-video-processing-service/docs/implementation.md
+- Audio Integration → services/mcp-audio-service/docs/implementation.md
+- 3D Asset Management → services/mcp-3d-asset-service/docs/implementation.md
+- Media Transcoding → services/mcp-media-transcoding-service/docs/implementation.md
+- Webhook System → services/webhook-dispatcher-service/docs/implementation.md
+- Analytics & Insights → services/analytics-service/docs/implementation.md
+- Export Capabilities → services/export-service/docs/implementation.md
+
+---
+
 
 ## ❌ MISSING/PLANNED FEATURES
 
@@ -171,6 +199,8 @@ The auto-movie platform is an AI-powered movie production platform built with:
 2. **Story Development Agent** - Core AI-guided story creation
 3. **Character Creation System** - Basic character design tools
 4. **Enhanced Media Processing** - Jina v4 embeddings integration
+
+5. **Prompt Management & Testing System** — REST API, UI screens, execution engine
 
 ### Short-term (1-2 months)
 1. **Visual Design Pipeline** - Storyboarding and concept creation
