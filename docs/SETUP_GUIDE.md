@@ -5,6 +5,18 @@
 
 This guide will help you set up the complete movie generation platform development environment on your local machine.
 
+## 🌐 **Production Services Available**
+
+**✅ LIVE PRODUCTION ENDPOINTS:**
+- **🧠 Brain Service**: `https://brain.ft.tc` - **LIVE AND TESTED** ✅
+  - All MCP tools operational
+  - Jina v4 embeddings working
+  - Neo4j knowledge graph integrated
+- **🤖 LangGraph Orchestrator**: `https://agents.ft.tc` - **OPERATIONAL** ✅
+- **📊 Neo4j Database**: `https://neo4j.ft.tc` - **ACTIVE** ✅
+
+**💡 Quick Start Tip**: You can use the production brain service directly instead of setting up locally!
+
 ## 🎯 Prerequisites
 
 ### Required Software
@@ -57,6 +69,17 @@ git submodule status
 ### 3. Start Core Services (Docker)
 
 **Start Brain Service (REQUIRED - other services depend on this):**
+
+**Option 1: Use Production Brain Service (Recommended)**
+```bash
+# The brain service is live at brain.ft.tc - no local setup needed!
+# Just configure your services to use: https://brain.ft.tc
+
+# Test production brain service
+curl https://brain.ft.tc/health
+```
+
+**Option 2: Local Development Setup**
 ```bash
 cd services/mcp-brain-service
 
@@ -145,8 +168,11 @@ CORS_ORIGINS=http://localhost:3010,http://localhost:3000
 ```bash
 # apps/auto-movie/.env.local
 
-# Brain service connection
-NEXT_PUBLIC_BRAIN_SERVICE_URL=http://localhost:8002
+# Brain service connection (Production - RECOMMENDED)
+NEXT_PUBLIC_BRAIN_SERVICE_URL=https://brain.ft.tc
+
+# OR for local development
+# NEXT_PUBLIC_BRAIN_SERVICE_URL=http://localhost:8002
 
 # PayloadCMS configuration  
 PAYLOAD_SECRET=your-payload-secret-key
@@ -160,9 +186,13 @@ NODE_ENV=development
 ```bash
 # services/langgraph-orchestrator/.env
 
-# Brain service connection (CRITICAL)
-BRAIN_SERVICE_BASE_URL=http://localhost:8002
-BRAIN_SERVICE_WS_URL=ws://localhost:8002/mcp
+# Brain service connection (CRITICAL) - Production endpoints
+BRAIN_SERVICE_BASE_URL=https://brain.ft.tc
+BRAIN_SERVICE_WS_URL=wss://brain.ft.tc/mcp
+
+# OR for local development
+# BRAIN_SERVICE_BASE_URL=http://localhost:8002
+# BRAIN_SERVICE_WS_URL=ws://localhost:8002/mcp
 
 # LLM configuration (being clarified - see CLARIFICATIONS.md)
 OPENROUTER_API_KEY=your_openrouter_key

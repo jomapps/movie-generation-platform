@@ -19,6 +19,8 @@ docs/
 ├── AI_AGENT_SYSTEM.md          ← 50+ AI agents and production workflows
 ├── DEVELOPMENT_STATUS.md        ← What's built, what's in progress, what's next
 ├── SETUP_GUIDE.md              ← How to get everything running locally
+├── PRODUCTION_ENDPOINTS.md      ← **NEW** ✅ Live production services and endpoints
+├── JINA_V4_INTEGRATION.md      ← **NEW** ✅ Complete Jina v4 architecture transformation
 ├── API_REFERENCE.md            ← Complete API and MCP tools documentation
 ├── DEPLOYMENT_GUIDE.md         ← Production deployment and configuration
 ├── TROUBLESHOOTING.md          ← Common problems and solutions
@@ -48,6 +50,8 @@ docs/
 | `AI_AGENT_SYSTEM.md` | Developers/Stakeholders | Agent system design | 50+ specialized AI agents, workflows, coordination |
 | `DEVELOPMENT_STATUS.md` | All stakeholders | Progress tracking | Implementation status, roadmap, Phase 3 agent system |
 | `SETUP_GUIDE.md` | Developers | Getting started | Step-by-step local development setup |
+| `PRODUCTION_ENDPOINTS.md` | All users | Production services | Live endpoints, status, configuration examples |
+| `JINA_V4_INTEGRATION.md` | Developers/Stakeholders | Architecture status | Complete transformation documentation, all phases |
 
 ### Reference Documentation (As-Needed)
 
