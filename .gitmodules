@@ -22,3 +22,35 @@
 	path = apps/auto-movie
 	url = https://github.com/jomapps/auto-movie.git
 	branch = master
+[submodule "services/analytics-service"]
+	path = services/analytics-service
+	url = https://github.com/jomapps/analytics-service.git
+	branch = master
+[submodule "services/export-service"]
+	path = services/export-service
+	url = https://github.com/jomapps/export-service.git
+	branch = master
+[submodule "services/mcp-3d-asset-service"]
+	path = services/mcp-3d-asset-service
+	url = https://github.com/jomapps/mcp-3d-asset-service.git
+	branch = master
+[submodule "services/mcp-audio-service"]
+	path = services/mcp-audio-service
+	url = https://github.com/jomapps/mcp-audio-service.git
+	branch = master
+[submodule "services/mcp-media-transcoding-service"]
+	path = services/mcp-media-transcoding-service
+	url = https://github.com/jomapps/mcp-media-transcoding-service.git
+	branch = master
+[submodule "services/mcp-video-processing-service"]
+	path = services/mcp-video-processing-service
+	url = https://github.com/jomapps/mcp-video-processing-service.git
+	branch = master
+[submodule "services/mcp-visual-design-service"]
+	path = services/mcp-visual-design-service
+	url = https://github.com/jomapps/mcp-visual-design-service.git
+	branch = master
+[submodule "services/webhook-dispatcher-service"]
+	path = services/webhook-dispatcher-service
+	url = https://github.com/jomapps/webhook-dispatcher-service.git
+	branch = master
