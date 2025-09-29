@@ -1,18 +1,19 @@
+
 [submodule "services/mcp-story-service"]
 	path = services/mcp-story-service
-	url = https://github.com/jomapps/mcp-story-service.git
+	url = git@github.com:jomapps/mcp-story-service.git
 	branch = master
 [submodule "services/mcp-character-service"]
 	path = services/mcp-character-service
-	url = https://github.com/jomapps/mcp-character-service.git
+	url = git@github.com:jomapps/mcp-character-service.git
 	branch = master
 [submodule "services/mcp-brain-service"]
 	path = services/mcp-brain-service
-	url = https://github.com/jomapps/mcp-brain-service.git
+	url = git@github.com:jomapps/mcp-brain-service.git
 	branch = master
 [submodule "services/langgraph-orchestrator"]
 	path = services/langgraph-orchestrator
-	url = https://github.com/jomapps/langgraph-orchestrator.git
+	url = git@github.com:jomapps/langgraph-orchestrator.git
 	branch = master
 [submodule "services/celery-redis"]
 	path = services/celery-redis
@@ -20,53 +21,53 @@
 	branch = master
 [submodule "apps/auto-movie"]
 	path = apps/auto-movie
-	url = https://github.com/jomapps/auto-movie.git
+	url = git@github.com:jomapps/auto-movie.git
 	branch = master
 [submodule "services/analytics-service"]
 	path = services/analytics-service
-	url = https://github.com/jomapps/analytics-service.git
+	url = git@github.com:jomapps/analytics-service.git
 	branch = master
 [submodule "services/export-service"]
 	path = services/export-service
-	url = https://github.com/jomapps/export-service.git
+	url = git@github.com:jomapps/export-service.git
 	branch = master
 [submodule "services/mcp-3d-asset-service"]
 	path = services/mcp-3d-asset-service
-	url = https://github.com/jomapps/mcp-3d-asset-service.git
+	url = git@github.com:jomapps/mcp-3d-asset-service.git
 	branch = master
 [submodule "services/mcp-audio-service"]
 	path = services/mcp-audio-service
-	url = https://github.com/jomapps/mcp-audio-service.git
+	url = git@github.com:jomapps/mcp-audio-service.git
 	branch = master
 [submodule "services/mcp-media-transcoding-service"]
 	path = services/mcp-media-transcoding-service
-	url = https://github.com/jomapps/mcp-media-transcoding-service.git
+	url = git@github.com:jomapps/mcp-media-transcoding-service.git
 	branch = master
 [submodule "services/mcp-video-processing-service"]
 	path = services/mcp-video-processing-service
-	url = https://github.com/jomapps/mcp-video-processing-service.git
+	url = git@github.com:jomapps/mcp-video-processing-service.git
 	branch = master
 [submodule "services/mcp-visual-design-service"]
 	path = services/mcp-visual-design-service
-	url = https://github.com/jomapps/mcp-visual-design-service.git
+	url = git@github.com:jomapps/mcp-visual-design-service.git
 	branch = master
 [submodule "services/webhook-dispatcher-service"]
 	path = services/webhook-dispatcher-service
-	url = https://github.com/jomapps/webhook-dispatcher-service.git
+	url = git@github.com:jomapps/webhook-dispatcher-service.git
 	branch = master
 [submodule "services/mcp-story-bible-service"]
 	path = services/mcp-story-bible-service
-	url = https://github.com/jomapps/mcp-story-bible-service.git
+	url = git@github.com:jomapps/mcp-story-bible-service.git
 [submodule "services/mcp-distribution-service"]
 	path = services/mcp-distribution-service
-	url = https://github.com/jomapps/mcp-distribution-service.git
+	url = git@github.com:jomapps/mcp-distribution-service.git
 	branch = master
 [submodule "services/mcp-final-qc-service"]
 	path = services/mcp-final-qc-service
-	url = https://github.com/jomapps/mcp-final-qc-service.git
+	url = git@github.com:jomapps/mcp-final-qc-service.git
 [submodule "services/mcp-series-creator-service"]
 	path = services/mcp-series-creator-service
-	url = https://github.com/jomapps/mcp-series-creator-service.git
+	url = git@github.com:jomapps/mcp-series-creator-service.git
 [submodule "services/mcp-story-architect-service"]
 	path = services/mcp-story-architect-service
-	url = https://github.com/jomapps/mcp-story-architect-service.git
+	url = git@github.com:jomapps/mcp-story-architect-service.git
