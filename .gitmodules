@@ -57,3 +57,7 @@
 [submodule "services/mcp-story-bible-service"]
 	path = services/mcp-story-bible-service
 	url = https://github.com/jomapps/mcp-story-bible-service.git
+[submodule "services/mcp-distribution-service"]
+	path = services/mcp-distribution-service
+	url = https://github.com/jomapps/mcp-distribution-service.git
+	branch = master
