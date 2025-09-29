@@ -1,0 +1,3 @@
+pydantic>=2.6
+# MCP dependency is referenced by other services; install as appropriate in environment
+

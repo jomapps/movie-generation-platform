@@ -61,3 +61,9 @@
 	path = services/mcp-distribution-service
 	url = https://github.com/jomapps/mcp-distribution-service.git
 	branch = master
+[submodule "services/mcp-final-qc-service"]
+	path = services/mcp-final-qc-service
+	url = https://github.com/jomapps/mcp-final-qc-service.git
+[submodule "services/mcp-series-creator-service"]
+	path = services/mcp-series-creator-service
+	url = https://github.com/jomapps/mcp-series-creator-service.git
