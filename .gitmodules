@@ -71,3 +71,11 @@
 [submodule "services/mcp-story-architect-service"]
 	path = services/mcp-story-architect-service
 	url = git@github.com:jomapps/mcp-story-architect-service.git
+[submodule "services/mcp-video-editor-service"]
+	path = services/mcp-video-editor-service
+	url = git@github.com:jomapps/mcp-video-editor-service.git
+	branch = master
+[submodule "services/mcp-video-generation-service"]
+	path = services/mcp-video-generation-service
+	url = git@github.com:jomapps/mcp-video-generation-service.git
+	branch = master
