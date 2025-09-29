@@ -61,25 +61,25 @@
 - **Dev**: `story.ngrok.pro`
 - **Prod**: `story.ft.tc`
 
-#### Character MCP Server  
+#### Character MCP Server
 - **Local**: `localhost:8011`
-- **Dev**: `characters.ngrok.pro`
-- **Prod**: `characters.ft.tc`
+- **Dev**: `character.ngrok.pro`
+- **Prod**: `character.ft.tc`
 
 #### Visual MCP Server
 - **Local**: `localhost:8012`
-- **Dev**: `visuals.ngrok.pro`
-- **Prod**: `visuals.ft.tc`
+- **Dev**: `visual.ngrok.pro`
+- **Prod**: `visual.ft.tc`
 
 #### Audio MCP Server
 - **Local**: `localhost:8013`
-- **Dev**: `audio.ngrok.pro`
-- **Prod**: `audio.ft.tc`
+- **Dev**: `audio.ngrok-free.dev`
+- **Prod**: `story-architect.ft.tc`
 
 #### Asset MCP Server
 - **Local**: `localhost:8014`
-- **Dev**: `assets.ngrok.pro`
-- **Prod**: `assets.ft.tc`
+- **Dev**: `asset.ngrok.pro`
+- **Prod**: `asset.ft.tc`
 
 ## Monitoring & Analytics Services
 
@@ -185,10 +185,10 @@ ngrok http 8003 --domain=agents.ngrok.pro
 # Domain MCP Servers
 ngrok http 8015 --domain=story-bible.ngrok.pro
 ngrok http 8010 --domain=story.ngrok.pro
-ngrok http 8011 --domain=characters.ngrok.pro
-ngrok http 8012 --domain=visuals.ngrok.pro
-ngrok http 8013 --domain=audio.ngrok.pro
-ngrok http 8014 --domain=assets.ngrok.pro
+ngrok http 8011 --domain=character.ngrok.pro
+ngrok http 8012 --domain=visual.ngrok.pro
+ngrok http 8013 --domain=audio.ngrok-free.dev
+ngrok http 8014 --domain=asset.ngrok.pro
 
 # Monitoring
 ngrok http 9090 --domain=metrics.ngrok.pro

@@ -1,6 +1,6 @@
 # Movie Generation Platform - AI Agent System
 
-**Last Verified**: January 28, 2025  
+**Last Verified**: January 28, 2025
 **Status**: Comprehensive planning complete | Implementation in Phase 3 (Q2 2025)
 
 ## 🤖 Complete AI Movie Production Agent System
@@ -135,11 +135,11 @@ flowchart TD
     J --> K[Audio Mixer]
     K --> L[Final QC]
     L --> M[Distribution]
-    
+
     B --> N[World Builder]
     N --> O[Environment Designer]
     O --> H
-    
+
     D --> P[Character Arc Manager]
     P --> Q[Dialogue Writer]
     Q --> F
@@ -154,7 +154,7 @@ flowchart LR
     D --> E[Dialogue Delivery]
     E --> F[Voice Matching]
     F --> G[Audio Mixer]
-    
+
     H[Story Bible] --> B
     I[Character Arc Manager] --> C
     J[Dialogue Writer] --> D
@@ -167,7 +167,7 @@ flowchart TD
     B[Script Supervisor Agent] --> D
     C[Asset Manager Agent] --> D
     D --> E[Final QC Agent]
-    
+
     F[Version Control Agent] --> G[Performance Monitor Agent]
     G --> H[Cost Optimizer Agent]
     H --> E
@@ -191,6 +191,39 @@ Each agent is implemented as:
 | **Visual MCP** | 8012 | 7 agents | Visual design and storyboarding |
 | **Audio MCP** | 8013 | 6 agents | Sound and music production |
 | **Asset MCP** | 8014 | 4 agents | Asset management and optimization |
+
+
+### MCP Service Domains (Local / Dev / Prod)
+
+- Story MCP (port 8010)
+  - Local: localhost:8010
+  - Dev: story.ngrok.pro
+  - Prod: story.ft.tc
+
+- Character MCP (port 8011)
+  - Local: localhost:8011
+  - Dev: character.ngrok.pro
+  - Prod: character.ft.tc
+
+- Visual MCP (port 8012)
+  - Local: localhost:8012
+  - Dev: visual.ngrok.pro
+  - Prod: visual.ft.tc
+
+- Audio MCP (port 8013)
+  - Local: localhost:8013
+  - Dev: audio.ngrok-free.dev
+  - Prod: story-architect.ft.tc
+
+- Asset MCP (port 8014)
+  - Local: localhost:8014
+  - Dev: asset.ngrok.pro
+  - Prod: asset.ft.tc
+
+- Story Bible MCP (port 8015)
+  - Local: localhost:8015
+  - Dev: story-bible.ngrok.pro
+  - Prod: story-bible.ft.tc
 
 ### **Coordination Patterns**
 
