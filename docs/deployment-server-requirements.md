@@ -42,6 +42,17 @@ This guide captures the runtime, infrastructure, and process-management requirem
 
 All shared data services can run on the same VM for MVP, but consider managed offerings (Atlas, Redis Enterprise, Aura) for resilience.
 
+### Current Host Installation Snapshot (Last verified 2025-02-14)
+
+| Component | Installed Version | Verification Command |
+|-----------|------------------|----------------------|
+| MongoDB Community | 7.0.24 | `mongod --version` |
+| Neo4j | 5.26.12 | `neo4j --version` |
+| FFmpeg | 6.1.1-3ubuntu5 | `ffmpeg -version` |
+| Redis Server | 7.0.15 | `redis-server --version` |
+
+> All core data/processing services above are present on the target Ubuntu host and respond with the versions listed when the commands are executed as the deployment user.
+
 ## Application & Agent Services
 
 ### Core Platform Processes

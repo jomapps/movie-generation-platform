@@ -16,7 +16,7 @@
 	branch = master
 [submodule "services/celery-redis"]
 	path = services/celery-redis
-	url = https://github.com/jomapps/celery-redis.git
+	url = git@github.com:jomapps/celery-redis.git
 	branch = master
 [submodule "apps/auto-movie"]
 	path = apps/auto-movie
