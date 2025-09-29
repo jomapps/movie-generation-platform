@@ -199,31 +199,48 @@ Each agent is implemented as:
   - Local: localhost:8010
   - Dev: story.ngrok.pro
   - Prod: story.ft.tc
+  - Purpose: Narrative and world building
+  - Hosted functionality: Series Creator; Story Architect; Episode Breakdown; Dialogue Writer; World Builder
+  - Repo: https://github.com/jomapps/mcp-story-service.git
 
 - Character MCP (port 8011)
   - Local: localhost:8011
   - Dev: character.ngrok.pro
   - Prod: character.ft.tc
+  - Purpose: Character creation and management
+  - Hosted functionality: Character Creator; Character Designer; Voice Creator; Casting Director; Character Arc Manager; Motion Capture; Facial Animation
 
 - Visual MCP (port 8012)
   - Local: localhost:8012
   - Dev: visual.ngrok.pro
   - Prod: visual.ft.tc
+  - Purpose: Visual design and storyboarding
+  - Hosted functionality: Storyboard Artist; Image Generation; Concept Artist; Environment Designer; Costume Designer; Props Master; Shot Designer; Makeup/SFX Designer
+  - Repo: https://github.com/jomapps/mcp-visual-design-service.git
 
 - Audio MCP (port 8013)
   - Local: localhost:8013
   - Dev: audio.ngrok-free.dev
   - Prod: story-architect.ft.tc
+  - Purpose: Sound and music production
+  - Hosted functionality: Voice Director; Sound Designer; Music Composer; Audio Mixer; Foley; Voice Library Manager; Voice Matching; Dialogue Delivery
+  - Repo: https://github.com/jomapps/mcp-audio-service.git
 
 - Asset MCP (port 8014)
   - Local: localhost:8014
   - Dev: asset.ngrok.pro
   - Prod: asset.ft.tc
+  - Purpose: Asset management and optimization
+  - Hosted functionality: Render Farm Coordinator; Version Control; Performance Monitor; Cost Optimizer
+  - Repo: https://github.com/jomapps/mcp-3d-asset-service.git
 
 - Story Bible MCP (port 8015)
   - Local: localhost:8015
   - Dev: story-bible.ngrok.pro
   - Prod: story-bible.ft.tc
+  - Purpose: Canon and consistency management
+  - Hosted functionality: Story Bible
+  - Repo: https://github.com/jomapps/mcp-story-bible-service.git
 
 ### **Coordination Patterns**
 
