@@ -67,3 +67,6 @@
 [submodule "services/mcp-series-creator-service"]
 	path = services/mcp-series-creator-service
 	url = https://github.com/jomapps/mcp-series-creator-service.git
+[submodule "services/mcp-story-architect-service"]
+	path = services/mcp-story-architect-service
+	url = https://github.com/jomapps/mcp-story-architect-service.git
