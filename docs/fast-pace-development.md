@@ -38,10 +38,49 @@ These improve quality but are not needed to get a first video. Implement after M
 
 ## Minimal MCP Services Needed for MVP
 - Story MCP (hosts: Series Creator, Story Architect, Episode Breakdown)
+- Story Bible MCP (hosts: Story Bible) — separate domain; all other Story agents remain under Story MCP
 - Character MCP (hosts: Character Creator)
 - Visual MCP (hosts: Storyboard Artist, Image Generation)
 - Video generation step can be a simple utility/integration rather than a full MCP at v0; promote to its own agent/service later.
 - Post (Video Editor, Final QC, Distribution) can initially be simple scripts/utilities called by the UI.
+
+## MCP Domains, Ports, Dev/Prod, Repos
+
+- visual.ft.tc
+  - Local: localhost:8012
+  - Dev: visual.ngrok.pro
+  - Prod: visual.ft.tc
+  - Repo: https://github.com/jomapps/mcp-visual-design-service.git
+  - Purpose: visual design related Agent
+
+- audio.ft.tc
+  - Local: localhost:8013
+  - Dev: audio.ngrok-free.dev
+  - Prod: story-architect.ft.tc
+  - Repo: https://github.com/jomapps/mcp-audio-service.git
+  - Purpose: audio related
+
+- asset.ft.tc
+  - Local: localhost:8014
+  - Dev: asset.ngrok.pro
+  - Prod: asset.ft.tc
+  - Repo: https://github.com/jomapps/mcp-3d-asset-service.git
+  - Purpose: visual design related Agent
+
+- story-bible.ft.tc
+  - Local: localhost:8015
+  - Dev: story-bible.ngrok.pro
+  - Prod: story-bible.ft.tc
+  - Repo: https://github.com/jomapps/mcp-story-bible-service.git
+  - Purpose: Create the story-bible related agent
+
+- story.ft.tc
+  - Local: localhost:8010
+  - Dev: story.ngrok.pro
+  - Prod: story.ft.tc
+  - Repo: https://github.com/jomapps/mcp-story-service.git
+  - Purpose: Create the story related agent
+
 
 ## Hand‑offs (I/O Contracts)
 - Concept brief → Story arc → Episode beats → Character profiles → Storyboard frames → Images → Video segments → Edited MP4 → QC pass → Distribution

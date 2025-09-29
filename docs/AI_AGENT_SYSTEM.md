@@ -17,7 +17,7 @@ The platform features **50+ specialized AI agents** working together to produce 
 | **Series Creator** | Initial concept, genre, tone, target audience | Story MCP | Creative vision and foundation |
 | **Story Architect** | Overarching narrative arc across episodes | Story MCP | Narrative structure and continuity |
 | **Episode Breakdown** | Individual episode structure, beats, pacing | Story MCP | Scene-level planning |
-| **Story Bible** | Canonical facts, character consistency, timeline | Story MCP | Consistency and canon management |
+| **Story Bible** | Canonical facts, character consistency, timeline | Story Bible MCP | Consistency and canon management |
 | **Dialogue Writer** | Character voice consistency, natural conversation | Story MCP | Character-specific dialogue |
 | **World Builder** | Universe rules, geography, culture, history | Story MCP | Setting and environment creation |
 

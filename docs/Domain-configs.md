@@ -54,12 +54,15 @@
 - **Local**: `localhost:8015`
 - **Dev**: `story-bible.ngrok.pro`
 - **Prod**: `story-bible.ft.tc`
-- **Purpose**: Story bible creation, narrative structure, character arcs, scene management
+- **Purpose**: Create the story-bible related agent
+- **Repo**: https://github.com/jomapps/mcp-story-bible-service.git
 
 #### Story MCP Server
 - **Local**: `localhost:8010`
 - **Dev**: `story.ngrok.pro`
 - **Prod**: `story.ft.tc`
+- **Purpose**: Create the story related agent
+- **Repo**: https://github.com/jomapps/mcp-story-service.git
 
 #### Character MCP Server
 - **Local**: `localhost:8011`
@@ -70,16 +73,22 @@
 - **Local**: `localhost:8012`
 - **Dev**: `visual.ngrok.pro`
 - **Prod**: `visual.ft.tc`
+- **Purpose**: visual design related Agent
+- **Repo**: https://github.com/jomapps/mcp-visual-design-service.git
 
 #### Audio MCP Server
 - **Local**: `localhost:8013`
 - **Dev**: `audio.ngrok-free.dev`
 - **Prod**: `story-architect.ft.tc`
+- **Purpose**: audio related
+- **Repo**: https://github.com/jomapps/mcp-audio-service.git
 
 #### Asset MCP Server
 - **Local**: `localhost:8014`
 - **Dev**: `asset.ngrok.pro`
 - **Prod**: `asset.ft.tc`
+- **Purpose**: visual design related Agent
+- **Repo**: https://github.com/jomapps/mcp-3d-asset-service.git
 
 ## Monitoring & Analytics Services
 
