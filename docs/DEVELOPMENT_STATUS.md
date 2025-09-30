@@ -1,7 +1,15 @@
 # Movie Generation Platform - Development Status
 
-**Last Verified**: September 30, 2025 - 04:40 UTC
+**Last Verified**: September 30, 2025 - 13:05 UTC
 **Overall Progress**: **Phase 1 Complete** | **Phase 2 Complete** | **Phase 3 MVP COMPLETE + Quality-Controlled Video Pipeline** 🎉
+
+## 🔧 Recent Updates
+
+### September 30, 2025 - Critical Bug Fix
+- ✅ **Fixed**: Project creation form save failure in `apps/auto-movie`
+- **Issue**: Missing `status` field in Zod validation causing form submission errors
+- **Impact**: All users can now successfully create projects
+- **Details**: See [BUGFIXES.md](BUGFIXES.md) for complete technical details
 
 ## 🎯 Development Phases Overview
 
